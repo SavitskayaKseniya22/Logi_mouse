@@ -11,6 +11,7 @@ html {
 
 p,
 ul,
+ol,
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +21,8 @@ input {
   padding: 0;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -93,6 +95,8 @@ h2 {
 
   font-size: 20px;
   line-height: 23px;
+
+  margin: 0;
 
   @media (min-width: 894px) {
     font-size: 40px;
