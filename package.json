@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1"
   }

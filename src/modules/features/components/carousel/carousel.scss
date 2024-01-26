@@ -1,0 +1,44 @@
+.features__carousel {
+  .d-block {
+    height: 420px;
+
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  .features__carousel-indicators {
+    width: 165px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .carousel-indicator {
+      width: 15px;
+      height: 15px;
+      border: none;
+      border-radius: 50%;
+      background: #c4c4c4;
+    }
+  }
+
+  @media (min-width: 894px) {
+    .d-block {
+      width: 440px;
+      height: 610px;
+      margin-bottom: 80px;
+    }
+
+    .features__carousel-indicators {
+      width: 275px;
+
+      .carousel-indicator {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
+}
