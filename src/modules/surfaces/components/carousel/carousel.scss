@@ -1,0 +1,59 @@
+.surfaces__carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .d-block {
+    height: 240px;
+
+    @media (min-width: 894px) {
+      height: 574px;
+    }
+  }
+}
+
+.carousel__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 894px) {
+    width: 480px;
+  }
+}
+
+.surfaces__carousel-indicators {
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+
+  @media (min-width: 894px) {
+    width: 320px;
+  }
+
+  button {
+    border-radius: 50%;
+
+    img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+
+      @media (min-width: 894px) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+.carousel-control {
+  width: 30px;
+  height: 30px;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
