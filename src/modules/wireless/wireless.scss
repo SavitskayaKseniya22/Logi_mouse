@@ -1,0 +1,106 @@
+.wireless {
+  background-color: #ededed;
+}
+
+.wireless__info {
+  max-width: 760px;
+  flex-grow: 2;
+}
+
+.wireless__inner {
+  padding: 100px 0 18px;
+  background-image: url('./assets/img-blutooth.png');
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (min-width: 894px) {
+    background-position: center 80px;
+    padding: 160px 0 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 125px 0 48px;
+    background-position: center 45px;
+  }
+  @media (min-width: 1920px) {
+    padding: 155px 0 60px;
+  }
+}
+
+.wireless__img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  @media (min-width: 894px) {
+    margin-top: -50px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: -220px;
+    gap: 6rem;
+  }
+}
+
+.wireless__img {
+  width: 375px;
+  height: 218px;
+  object-fit: contain;
+
+  &.wireless__img_front {
+    display: none;
+  }
+
+  @media (min-width: 894px) {
+    width: 836px;
+    height: 498px;
+  }
+
+  @media (min-width: 1280px) {
+    &.wireless__img_front {
+      display: block;
+      width: 533px;
+      height: 286px;
+    }
+
+    &.wireless__img_side {
+      width: 667px;
+      height: 307px;
+    }
+  }
+}
+
+.wireless__addition {
+  font-size: 60px;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #c4c4c4;
+
+  @media (min-width: 894px) {
+    font-size: 150px;
+    line-height: 175px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 300px;
+    line-height: 300px;
+    display: flex;
+    align-items: flex-start;
+
+    & > span {
+      font-size: 96px;
+      line-height: 112px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 50px;
+  }
+}
