@@ -1,10 +1,17 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 100px;
+  padding-top: 90px;
+
+  @media (min-width: 894px) {
+    gap: 120px;
+    padding-top: 65px;
+  }
 
   @media (min-width: 1280px) {
     gap: 0;
+    padding: 0;
   }
 
   @media (min-width: 1920px) {
@@ -14,7 +21,7 @@
 
 .contain__image {
   width: 375px;
-  height: 320px;
+  height: 310px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,12 +44,16 @@
   }
 
   @media (min-width: 1280px) {
-    width: 50%;
-    height: 100%;
+    width: 640px;
+    height: 557px;
 
     &.contain__image_second {
       background-image: url('./assets/img-2_big.jpg');
     }
+  }
+
+  @media (min-width: 1920px) {
+    width: 654px;
   }
 }
 
@@ -51,15 +62,11 @@
   flex-direction: column;
   gap: 1rem;
 
-  .advantages__text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  @media (min-width: 894px) {
+    gap: 3rem;
   }
 
   @media (min-width: 1280px) {
-    display: flex;
     flex-direction: row;
     gap: 0;
     height: 557px;
@@ -67,30 +74,43 @@
     > * {
       width: 50%;
     }
+  }
+}
 
-    &:first-child {
-      .advantages__text {
-        order: 2;
+.advantages__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+
+  @media (min-width: 894px) {
+    gap: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 40px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &.advantages__text_first {
+      order: 2;
+      text-align: left;
+      align-self: flex-end;
+      padding-right: 15%;
+
+      h2 {
         text-align: left;
-        align-self: flex-end;
-        padding-right: 25%;
-        padding-bottom: 60px;
-
-        h2 {
-          text-align: left;
-        }
       }
     }
 
-    &:last-child {
-      .advantages__text {
+    &.advantages__text_second {
+      text-align: right;
+      align-self: flex-start;
+      padding-left: 15%;
+
+      h2 {
         text-align: right;
-        align-self: flex-start;
-        padding-left: 25%;
-        padding-top: 60px;
-        h2 {
-          text-align: right;
-        }
       }
     }
   }
