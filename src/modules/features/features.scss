@@ -6,7 +6,7 @@
   padding-top: 70px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+
   align-items: center;
   justify-content: center;
 
@@ -28,9 +28,23 @@
 
   @media (min-width: 1920px) {
     padding: 100px 55px;
+  }
+}
 
-    .features__info {
-      padding: 38px 160px 72px;
-    }
+.features__info {
+  padding: 20px 20px 35px;
+
+  @media (min-width: 894px) {
+    padding: 30px 20px 50px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 70%;
+    padding: 35px 20px 45px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 95%;
+    padding: 35px 160px 70px;
   }
 }

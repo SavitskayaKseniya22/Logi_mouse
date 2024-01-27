@@ -21,6 +21,14 @@ export function software() {
                 height="35"
                 alt="photoshop"
               />
+            </li> 
+            <li>
+              <img
+                src=${img_pr}
+                width="35"
+                height="35"
+                alt="premier"
+              />
             </li>
             <li>
               <img
@@ -32,7 +40,7 @@ export function software() {
               />
             </li>
             <li>
-              <img src=${img_ex} width="40" height="35" alt="excel" />
+              <img src=${img_word} width="40" height="35" alt="word" />
             </li>
             <li>
               <img
@@ -42,16 +50,9 @@ export function software() {
                 alt="powerpoint"
               />
             </li>
-            <li>
-              <img src=${img_word} width="40" height="35" alt="word" />
-            </li>
-            <li>
-              <img
-                src=${img_pr}
-                width="35"
-                height="35"
-                alt="premier"
-              />
+
+           <li>
+              <img src=${img_ex} width="40" height="35" alt="excel" />
             </li>
             <li>
               <img

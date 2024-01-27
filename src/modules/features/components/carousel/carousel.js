@@ -20,7 +20,75 @@ export function carousel() {
   element['data-bs-ride'] = 'carousel';
 
   const carouselContent = `
-  <div class="features__carousel-indicators carousel-indicators">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src=${img_1}
+                srcset="${img_1} 375w, ${img_1_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                              894px"
+                class="d-block w-100"
+                alt="carousel 1 slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src=${img_2}
+               srcset="${img_2} 375w, ${img_2_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                              894px"
+                class="d-block w-100"
+                alt="carousel 2 slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src=${img_3}
+                srcset="${img_3} 375w, ${img_3_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                           894px"
+                class="d-block w-100"
+                alt="carousel 3 slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src=${img_4}
+                srcset="${img_4} 375w, ${img_4_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                            894px"
+                class="d-block w-100"
+                alt="carousel 4 slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src=${img_5}
+                srcset="${img_5} 375w, ${img_5_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                            894px"
+                class="d-block w-100"
+                alt="carousel 5 slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src=${img_6}
+                srcset="${img_6} 375w, ${img_6_middle} 894w"
+                sizes="(max-width: 893px) 375px,
+                            894px"
+                class="d-block w-100"
+                alt="carousel 6 slide"
+              />
+            </div>
+          </div>
+
+          <div class="features__carousel-indicators carousel-indicators">
             <button
               type="button"
               data-bs-target="#features__carousel"
@@ -65,67 +133,8 @@ export function carousel() {
               class="carousel-indicator"
             ></button>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src=${img_1}
-                srcset="${img_1} 375w, ${img_1_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                              894px"
-                class="d-block w-100"
-                alt="carousel 1 slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src=${img_2}
-               srcset="${img_2} 375w, ${img_2_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                              894px"
-                class="d-block w-100"
-                alt="carousel 2 slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src=${img_3}
-                srcset="${img_3} 375w, ${img_3_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                           894px"
-                class="d-block w-100"
-                alt="carousel 3 slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src=${img_4}
-                srcset="${img_4} 375w, ${img_4_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                            894px"
-                class="d-block w-100"
-                alt="carousel 4 slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src=${img_5}
-                srcset="${img_5} 375w, ${img_5_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                            894px"
-                class="d-block w-100"
-                alt="carousel 5 slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src=${img_6}
-                srcset="${img_6} 375w, ${img_6_middle} 894w"
-                sizes="(max-width: 893px) 375px,
-                            894px"
-                class="d-block w-100"
-                alt="carousel 6 slide"
-              />
-            </div>
+          
+          
     `;
 
   element.insertAdjacentHTML('afterbegin', carouselContent);
