@@ -20,29 +20,28 @@ export function wireless() {
         </p>
 
         <span class="wireless__addition">
-          70
-          <span>дней</span>
+          <span class="wireless__addition_main">70</span>
+          <span class="wireless__addition_sub">дней</span>
         </span>
 
         <ul class="wireless__img-container">
-
           <li>
             <img
               class="wireless__img wireless__img_front"
-              width="836"
-              height="495"
+              width="533"
+              height="286"
               src=${img_front}
-              alt="front side of mouse"
+              alt="front side of the mouse"
             />
           </li>
 
           <li>
             <img
-              class=" wireless__img wireless__img_side"
-              width="533"
-              height="286"
+              class="wireless__img wireless__img_side"
+              width="836"
+              height="495"
               src=${img_side}
-              alt="left side of mouse"
+              alt="left side of the mouse"
             />
           </li>
 
