@@ -9,7 +9,7 @@ export function surfaces() {
 
   const surfacesContent = `
       <h2>за любым столом</h2>
-      <p>
+      <p class="surfaces__info surfaces__info_top">
         Исследуйте ландшафты своего дома, не отвлекаясь от работы. MX Master 3
         достаточно компактная, чтобы сменить рабочее место и перенестись с
         ноутбуком на кухню.
@@ -25,9 +25,8 @@ export function surfaces() {
           <p>точек на дюйм чувствительность датчика</p>
         </li>
       </ul>
-
         ${carousel().outerHTML}
-      <p>
+      <p class="surfaces__info">
         Благодаря технологии Logitech Darkfierd, MX Master 3 работает на любой
         поверхности, даже на стекле.
       </p>

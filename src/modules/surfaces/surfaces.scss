@@ -4,75 +4,88 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 
-  .surfaces__advantages {
-    display: flex;
-    width: 336px;
+  @media (min-width: 894px) {
+    padding: 70px 0 60px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 70px 0;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 100px 0px;
+  }
+}
+
+.surfaces__info {
+  width: 70%;
+
+  @media (min-width: 894px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 60%;
+  }
+
+  &.surfaces__info_top {
+    margin: 20px 0 30px;
+
+    @media (min-width: 894px) {
+      margin: 30px 0 50px;
+    }
+  }
+}
+
+.surfaces__advantages {
+  display: flex;
+  gap: 6px;
+
+  li {
+    width: 165px;
     height: 95px;
-    gap: 1rem;
+    padding: 10px 18px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    span {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: 894px) {
+    gap: 30px;
 
     li {
-      width: 165px;
-      padding: 10px 18px;
-      border: 1px solid black;
+      width: 300px;
+      height: 170px;
+      padding: 25px 18px;
 
       span {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        text-transform: uppercase;
+        font-size: 40px;
+        line-height: 47px;
       }
     }
   }
-}
 
-@media (min-width: 894px) {
-  .surfaces {
-    padding: 70px 0 60px;
-
-    .surfaces__advantages {
-      width: 660px;
-      height: 170px;
-
-      li {
-        width: 300px;
-        padding: 10px 18px;
-
-        span {
-          font-size: 40px;
-          line-height: 47px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1280px) {
-  .surfaces {
-    padding: 70px 0;
-    gap: 3rem;
-
-    .surfaces__advantages {
-      width: 500px;
+  @media (min-width: 1280px) {
+    li {
+      width: 236px;
       height: 140px;
+      padding: 22px 25px;
+      gap: 0.25rem;
 
-      li {
-        width: 236px;
-        padding: 22px 25px;
-
-        span {
-          font-size: 36px;
-          line-height: 42px;
-        }
+      span {
+        font-size: 36px;
+        line-height: 42px;
       }
     }
-  }
-}
-
-@media (min-width: 1920px) {
-  .surfaces {
-    padding: 100px 0px;
   }
 }
