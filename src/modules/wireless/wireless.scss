@@ -33,10 +33,11 @@
 
   @media (min-width: 1280px) {
     padding: 125px 0 48px;
-    background-position: center 80px;
+    background-position: center 50px;
   }
 
   @media (min-width: 1920px) {
+    background-position: center 80px;
     padding: 155px 0 60px;
   }
 }
@@ -52,8 +53,11 @@
   }
 
   @media (min-width: 1280px) {
-    margin-top: -170px;
+    margin-top: -180px;
     gap: 5rem;
+  }
+  @media (min-width: 1920px) {
+    margin-top: -175px;
   }
 }
 

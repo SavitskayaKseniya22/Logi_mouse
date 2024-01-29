@@ -1,5 +1,4 @@
 .features__carousel {
-  background-color: rgba(127, 255, 212, 0.726);
   display: flex;
   flex-direction: column;
 
@@ -16,18 +15,18 @@
   @media (min-width: 1280px) {
     display: none;
   }
-}
 
-.carousel-inner {
-  width: 100%;
+  .carousel-inner {
+    width: 100%;
 
-  img.d-block {
-    height: 420px;
-    object-fit: contain;
+    img.d-block {
+      height: 420px;
+      object-fit: contain;
 
-    @media (min-width: 894px) {
-      width: 440px;
-      height: 610px;
+      @media (min-width: 894px) {
+        width: 440px;
+        height: 610px;
+      }
     }
   }
 }

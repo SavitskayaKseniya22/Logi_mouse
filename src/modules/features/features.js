@@ -10,9 +10,7 @@ export function features() {
   element.id = 'features';
 
   const featuresContent = `
-      
       <div class="inner features__inner">
-      
         <h2>с индивидуальными настройками</h2>
         <p class="features__info">
           Мышь MX Master 3 адаптируется под ваши рабочие процессы. Благодаря
