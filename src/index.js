@@ -24,3 +24,15 @@ function getContainer() {
 }
 
 document.body.appendChild(getContainer());
+
+document.querySelector('input#toggle').addEventListener('change', (event) => {
+  const { checked } = event.target;
+  document.body.style.overflow = checked ? 'hidden' : 'unset';
+});
+
+document.querySelectorAll('.top__navigator_slide a').forEach((elem) => {
+  elem.addEventListener('click', (event) => {
+    document.querySelector('input#toggle').checked = false;
+    document.body.style.overflow = 'unset';
+  });
+});
