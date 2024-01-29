@@ -1,0 +1,250 @@
+.top {
+  background-color: #e0e1e2;
+}
+
+.top__arrow_down {
+  display: block;
+  background: url('./assets/img__arrow_bottom.png') no-repeat center;
+  background-size: contain;
+  width: 40px;
+  height: 20px;
+
+  @media (min-width: 894px) {
+    width: 57px;
+    height: 29px;
+  }
+}
+
+.top__inner {
+  height: 595px;
+  padding: 25px 0 48px;
+  background: url('./assets/img__MXMaster.png') no-repeat center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .top__logo {
+    width: 130px;
+    height: 39px;
+  }
+
+  .top__info {
+    margin: auto 0 40px;
+    width: 80%;
+  }
+
+  .top__title {
+    margin: 90px 0 auto;
+  }
+
+  @media (min-width: 894px) {
+    height: 1165px;
+    background: url('./assets/img__MXMaster_middle.png') no-repeat center 280px;
+
+    padding: 54px 0 80px;
+
+    .top__logo {
+      width: 240px;
+      height: 72px;
+    }
+
+    .top__info {
+      margin: auto 0 76px;
+      width: 60%;
+    }
+
+    .top__title {
+      margin: 160px 0 auto;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    height: 826px;
+    padding: 70px 0 56px;
+    background: url('./assets/img__MXMaster_big.png') no-repeat 80px -10px;
+
+    .top__logo {
+      display: none;
+    }
+
+    .top__info {
+      margin: auto 0 50px;
+    }
+
+    .top__title {
+      margin: 0 0 auto;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    height: 880px;
+    padding: 100px 0 80px;
+    background-position: 55px 20px;
+  }
+}
+
+.top__header {
+  text-transform: uppercase;
+  background-color: #2f3132;
+}
+
+.top-header__button_open {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 100;
+  height: 30px;
+  padding: 5px 0;
+
+  @media (min-width: 894px) {
+    top: 50px;
+    right: 60px;
+    height: 60px;
+    padding: 10px 0;
+
+    img {
+      width: 60px;
+      height: 40px;
+    }
+  }
+}
+
+.top-header__button_close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+
+  @media (min-width: 894px) {
+    top: 50px;
+    right: 60px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.top-header__logo {
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: block;
+    width: 150px;
+  }
+}
+
+.top__navigator {
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: white;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 30px;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+
+    li {
+      border-right: 2px solid #c4c4c4;
+      padding: 0 20px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+}
+
+.top__navigator_slide {
+  display: flex;
+  width: 375px;
+  height: 810px;
+  gap: 30px;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./assets/img__logo_white.png') no-repeat center 25px #2f3132;
+  position: relative;
+
+  a {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  @media (min-width: 894px) {
+    width: 894px;
+    height: 1165px;
+    gap: 60px;
+    padding: 120px;
+    background: url('./assets/img__logo_white-middle.png') no-repeat center 54px
+      #2f3132;
+
+    a {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
+}
+
+.top-header__inner {
+  #toggle {
+    display: none;
+  }
+
+  #toggle:checked ~ .top-navigator-slide__container {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #2f3132;
+  }
+
+  #toggle:not(:checked) ~ .top-navigator-slide__container {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    height: 100px;
+    padding: 28px 60px;
+    align-items: center;
+    justify-content: space-between;
+
+    #toggle:checked ~ .top-navigator-slide__container,
+    .top-navigator-slide__container,
+    .open-menu {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    padding: 28px 60px;
+  }
+}
