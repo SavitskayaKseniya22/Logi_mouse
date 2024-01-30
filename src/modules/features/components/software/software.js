@@ -1,14 +1,14 @@
 import './software.scss';
 
-import img_ps from '../../assets/apps/img_ps.png';
-import img_browsers from '../../assets/apps/img_browsers.png';
-import img_ex from '../../assets/apps/img_ex.png';
-import img_point from '../../assets/apps/img_point.png';
-import img_word from '../../assets/apps/img_word.png';
-import img_pr from '../../assets/apps/img_pr.png';
-import img_vid from '../../assets/apps/img_vid.png';
+import imgPs from '../../assets/apps/img_ps.png';
+import imgBrowsers from '../../assets/apps/img_browsers.png';
+import imgEx from '../../assets/apps/img_ex.png';
+import imgPoint from '../../assets/apps/img_point.png';
+import imgWord from '../../assets/apps/img_word.png';
+import imgPr from '../../assets/apps/img_pr.png';
+import imgVid from '../../assets/apps/img_vid.png';
 
-export function software() {
+export default function software() {
   const element = document.createElement('div');
   element.className = 'software';
 
@@ -16,7 +16,7 @@ export function software() {
           <ul class="software__list">
             <li>
               <img
-                src=${img_ps}
+                src=${imgPs}
                 width="35"
                 height="35"
                 alt="photoshop"
@@ -24,7 +24,7 @@ export function software() {
             </li> 
             <li>
               <img
-                src=${img_pr}
+                src=${imgPr}
                 width="35"
                 height="35"
                 alt="premier"
@@ -35,16 +35,16 @@ export function software() {
                 class="software_item_long
                 width="80"
                 height="35"
-                src=${img_browsers}
+                src=${imgBrowsers}
                 alt="brousers"
               />
             </li>
             <li>
-              <img src=${img_word} width="40" height="35" alt="word" />
+              <img src=${imgWord} width="40" height="35" alt="word" />
             </li>
             <li>
               <img
-                src=${img_point}
+                src=${imgPoint}
                 width="40"
                 height="35"
                 alt="powerpoint"
@@ -52,11 +52,11 @@ export function software() {
             </li>
 
            <li>
-              <img src=${img_ex} width="40" height="35" alt="excel" />
+              <img src=${imgEx} width="40" height="35" alt="excel" />
             </li>
             <li>
               <img
-                src=${img_vid}
+                src=${imgVid}
                 width="35"
                 height="35"
                 alt="movie-editor"

@@ -1,6 +1,6 @@
 import './advantages.scss';
 
-export function advantages() {
+export default function advantages() {
   const element = document.createElement('section');
   element.className = 'advantages inner';
   element.id = 'advantages';

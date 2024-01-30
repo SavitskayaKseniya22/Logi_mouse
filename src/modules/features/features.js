@@ -1,10 +1,10 @@
 import './features.scss';
 
-import { software } from './components/software/software.js';
-import { carousel } from './components/carousel/carousel.js';
-import img_mouse from './assets/img-mouse_main.png';
+import software from './components/software/software';
+import carousel from './components/carousel/carousel';
+import imgMouse from './assets/img-mouse_main.png';
 
-export function features() {
+export default function features() {
   const element = document.createElement('section');
   element.className = 'features';
   element.id = 'features';
@@ -18,7 +18,7 @@ export function features() {
           практически под любое используемое приложение.
         </p>
         <img class="features__image"
-          src=${img_mouse}
+          src=${imgMouse}
           width="1171"
           height="698"
           alt="Mouse features"

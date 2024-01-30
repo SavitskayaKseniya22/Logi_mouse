@@ -1,9 +1,9 @@
 import './wireless.scss';
 
-import img_front from './assets/img-mouse_front.png';
-import img_side from './assets/img-mouse_side.png';
+import imgFront from './assets/img-mouse_front.png';
+import imgSide from './assets/img-mouse_side.png';
 
-export function wireless() {
+export default function wireless() {
   const element = document.createElement('section');
   element.className = 'wireless';
   element.id = 'wireless';
@@ -30,7 +30,7 @@ export function wireless() {
               class="wireless__img wireless__img_front"
               width="533"
               height="286"
-              src=${img_front}
+              src=${imgFront}
               alt="front side of the mouse"
             />
           </li>
@@ -40,7 +40,7 @@ export function wireless() {
               class="wireless__img wireless__img_side"
               width="836"
               height="495"
-              src=${img_side}
+              src=${imgSide}
               alt="left side of the mouse"
             />
           </li>

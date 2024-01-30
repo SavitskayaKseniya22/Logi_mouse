@@ -1,6 +1,6 @@
 import './devices.scss';
 
-export function devices() {
+export default function devices() {
   const element = document.createElement('section');
   element.className = 'devices';
   element.id = 'devices';

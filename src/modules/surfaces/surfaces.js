@@ -1,8 +1,8 @@
 import './surfaces.scss';
 
-import { carousel } from './components/carousel/carousel.js';
+import carousel from './components/carousel/carousel';
 
-export function surfaces() {
+export default function surfaces() {
   const element = document.createElement('section');
   element.className = 'surfaces inner';
   element.id = 'surfaces';
@@ -14,7 +14,6 @@ export function surfaces() {
         достаточно компактная, чтобы сменить рабочее место и перенестись с
         ноутбуком на кухню.
       </p>
-
       <ul class="surfaces__advantages">
         <li>
           <span>В 5 раз</span>

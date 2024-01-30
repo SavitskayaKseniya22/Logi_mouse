@@ -1,6 +1,6 @@
 import './footer.scss';
 
-export function footer() {
+export default function footer() {
   const element = document.createElement('footer');
   element.className = 'footer';
   element.id = 'footer';

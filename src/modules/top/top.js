@@ -1,11 +1,11 @@
 import './top.scss';
 
-import logo__white from './assets/img__logo_white.png';
-import logo__black from './assets/img__logo_black.png';
-import img__burger from './assets/img__burger_big.png';
-import img__cross from './assets/img__cross_big.png';
+import logoWhite from './assets/img__logo_white.png';
+import logoBlack from './assets/img__logo_black.png';
+import imgBurger from './assets/img__burger_big.png';
+import imgCross from './assets/img__cross_big.png';
 
-export function top() {
+export default function top() {
   const element = document.createElement('div');
 
   const topContent = ` 
@@ -17,14 +17,14 @@ export function top() {
         class="top-header__logo"
         width="145"
         height="45"
-        src="${logo__white}"
+        src="${logoWhite}"
         alt="Logitech"
       />
     </a>
 
     <input type="checkbox" id="toggle" />
     <label for="toggle" class="top-header__button_open">
-      <img width="30" height="20" src="${img__burger}" alt="Burger" />
+      <img width="30" height="20" src="${imgBurger}" alt="Burger" />
     </label>
 
     <ul class="top__navigator">
@@ -50,7 +50,7 @@ export function top() {
         </li>
         <li>
           <label for="toggle" class="top-header__button_close">
-            <img width="25" height="25" src="${img__cross}" alt="Cross" />
+            <img width="25" height="25" src="${imgCross}" alt="Cross" />
           </label>
         </li>
       </ul>
@@ -65,7 +65,7 @@ export function top() {
         class="top__logo"
         width="240"
         height="73"
-        src="${logo__black}"
+        src="${logoBlack}"
         alt="Logitech"
       />
     </a>

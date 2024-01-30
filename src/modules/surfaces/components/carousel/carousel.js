@@ -1,35 +1,35 @@
 import './carousel.scss';
 
-import img__texture_cloth from '../../assets/img-texture_cloth.png';
-import img__texture_glass from '../../assets/img-texture_glass.png';
-import img__texture_linoleum from '../../assets/img-texture_linoleum.png';
-import img__texture_marble from '../../assets/img-texture_marble.png';
-import img__texture_wood from '../../assets/img-texture_wood.png';
+import imgTextureCloth from '../../assets/img-texture_cloth.png';
+import imgTextureGlass from '../../assets/img-texture_glass.png';
+import imgTextureLinoleum from '../../assets/img-texture_linoleum.png';
+import imgTextureMarble from '../../assets/img-texture_marble.png';
+import imgTextureWood from '../../assets/img-texture_wood.png';
 
-import img__cloth from '../../assets/img-cloth.png';
-import img__cloth_middle from '../../assets/img-cloth_middle.png';
-import img__cloth_big from '../../assets/img-cloth_big.png';
+import imgCloth from '../../assets/img-cloth.png';
+import imgClothMiddle from '../../assets/img-cloth_middle.png';
+import imgClothBig from '../../assets/img-cloth_big.png';
 
-import img__glass from '../../assets/img-glass.png';
-import img__glass_middle from '../../assets/img-glass_middle.png';
-import img__glass_big from '../../assets/img-glass_big.png';
+import imgGlass from '../../assets/img-glass.png';
+import imgGlassMiddle from '../../assets/img-glass_middle.png';
+import imgGlassBig from '../../assets/img-glass_big.png';
 
-import img__linoleum from '../../assets/img-linoleum.png';
-import img__linoleum_middle from '../../assets/img-linoleum_middle.png';
-import img__linoleum_big from '../../assets/img-linoleum_big.png';
+import imgLinoleum from '../../assets/img-linoleum.png';
+import imgLinoleumMiddle from '../../assets/img-linoleum_middle.png';
+import imgLinoleumBig from '../../assets/img-linoleum_big.png';
 
-import img__marble from '../../assets/img-marble.png';
-import img__marble_middle from '../../assets/img-marble_middle.png';
-import img__marble_big from '../../assets/img-marble_big.png';
+import imgMarble from '../../assets/img-marble.png';
+import imgMarbleMiddle from '../../assets/img-marble_middle.png';
+import imgMarbleBig from '../../assets/img-marble_big.png';
 
-import img__wood from '../../assets/img-wood.png';
-import img__wood_middle from '../../assets/img-wood_middle.png';
-import img__wood_big from '../../assets/img-wood_big.png';
+import imgWood from '../../assets/img-wood.png';
+import imgWoodMiddle from '../../assets/img-wood_middle.png';
+import imgWoodBig from '../../assets/img-wood_big.png';
 
-import img__left from '../../assets/icon-arrow_left.png';
-import img__right from '../../assets/icon-arrow_right.png';
+import imgLeft from '../../assets/icon-arrow_left.png';
+import imgRight from '../../assets/icon-arrow_right.png';
 
-export function carousel() {
+export default function carousel() {
   const element = document.createElement('div');
   element.className = 'carousel slide surfaces__carousel';
   element.id = 'surfaces__carousel';
@@ -40,11 +40,11 @@ export function carousel() {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img
-        src="${img__cloth}"
+        src="${imgCloth}"
         srcset="
-          ${img__cloth}         375w,
-          ${img__cloth_middle}  894w,
-          ${img__cloth_big}    1280w
+          ${imgCloth}         375w,
+          ${imgClothMiddle}  894w,
+          ${imgClothBig}    1280w
         "
         sizes="(max-width: 893px) 375px,
                              (max-width: 1279px) 894px,
@@ -55,11 +55,11 @@ export function carousel() {
     </div>
     <div class="carousel-item">
       <img
-        src="${img__glass}"
+        src="${imgGlass}"
         srcset="
-          ${img__glass}         375w,
-          ${img__glass_middle}  894w,
-          ${img__glass_big}    1280w
+          ${imgGlass}         375w,
+          ${imgGlassMiddle}  894w,
+          ${imgGlassBig}    1280w
         "
         sizes="(max-width: 893px) 375px,
                            (max-width: 1279px) 894px,
@@ -71,11 +71,11 @@ export function carousel() {
 
     <div class="carousel-item">
       <img
-        src="${img__linoleum}"
+        src="${imgLinoleum}"
         srcset="
-          ${img__linoleum}         375w,
-          ${img__linoleum_middle}  894w,
-          ${img__linoleum_big}    1280w
+          ${imgLinoleum}         375w,
+          ${imgLinoleumMiddle}  894w,
+          ${imgLinoleumBig}    1280w
         "
         sizes="(max-width: 893px) 375px,
                     (max-width: 1279px) 894px,
@@ -86,11 +86,11 @@ export function carousel() {
     </div>
     <div class="carousel-item">
       <img
-        src="${img__marble}"
+        src="${imgMarble}"
         srcset="
-          ${img__marble}         375w,
-          ${img__marble_middle}  894w,
-          ${img__marble_big}    1280w
+          ${imgMarble}         375w,
+          ${imgMarbleMiddle}  894w,
+          ${imgMarbleBig}    1280w
         "
         sizes="(max-width: 893px) 375px,
                            (max-width: 1279px) 894px,
@@ -101,11 +101,11 @@ export function carousel() {
     </div>
     <div class="carousel-item">
       <img
-        src="${img__wood}"
+        src="${imgWood}"
         srcset="
-          ${img__wood}         375w,
-          ${img__wood_middle}  894w,
-          ${img__wood_big}    1280w
+          ${imgWood}         375w,
+          ${imgWoodMiddle}  894w,
+          ${imgWoodBig}    1280w
         "
         sizes="(max-width: 893px) 375px,
                     (max-width: 1279px) 894px,
@@ -125,7 +125,7 @@ export function carousel() {
       data-bs-target="#surfaces__carousel"
       data-bs-slide="prev"
     >
-      <img src="${img__left}" alt="Left" width="13" height="21" class="surfaces__carousel-control_left" />
+      <img src="${imgLeft}" alt="Left" width="13" height="21" class="surfaces__carousel-control_left" />
     </button>
 
     <div class="surfaces__carousel-indicators">
@@ -138,7 +138,7 @@ export function carousel() {
         aria-current="true"
         aria-label="Slide 1"
       >
-        <img src="${img__texture_cloth}" alt="Cloth" width="30" height="30" />
+        <img src="${imgTextureCloth}" alt="Cloth" width="30" height="30" />
       </button>
 
       <button
@@ -147,7 +147,7 @@ export function carousel() {
         data-bs-slide-to="1"
         aria-label="Slide 2"
       >
-        <img src="${img__texture_glass}" alt="Glass" width="30" height="30" />
+        <img src="${imgTextureGlass}" alt="Glass" width="30" height="30" />
       </button>
 
       <button
@@ -157,7 +157,7 @@ export function carousel() {
         aria-label="Slide 3"
       >
         <img
-          src="${img__texture_linoleum}"
+          src="${imgTextureLinoleum}"
           alt="Linoleum"
           width="30"
           height="30"
@@ -170,7 +170,7 @@ export function carousel() {
         data-bs-slide-to="3"
         aria-label="Slide 4"
       >
-        <img src="${img__texture_marble}" alt="Marble" width="30" height="30" />
+        <img src="${imgTextureMarble}" alt="Marble" width="30" height="30" />
       </button>
 
       <button
@@ -179,7 +179,7 @@ export function carousel() {
         data-bs-slide-to="4"
         aria-label="Slide 5"
       >
-        <img src="${img__texture_wood}" alt="Wood" width="30" height="30" />
+        <img src="${imgTextureWood}" alt="Wood" width="30" height="30" />
       </button>
 
     </div>
@@ -190,7 +190,7 @@ export function carousel() {
       data-bs-target="#surfaces__carousel"
       data-bs-slide="next"
     >
-      <img src="${img__right}" alt="Left" width="13" height="21" class="surfaces__carousel-control_right" />
+      <img src="${imgRight}" alt="Left" width="13" height="21" class="surfaces__carousel-control_right" />
     </button>
 
   </div>

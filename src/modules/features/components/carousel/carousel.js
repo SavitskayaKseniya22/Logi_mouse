@@ -1,19 +1,19 @@
 import './carousel.scss';
 
-import img_1 from '../../assets/carousel/img-1.png';
-import img_1_middle from '../../assets/carousel/img-1_middle.png';
-import img_2 from '../../assets/carousel/img-2.png';
-import img_2_middle from '../../assets/carousel/img-2_middle.png';
-import img_3 from '../../assets/carousel/img-3.png';
-import img_3_middle from '../../assets/carousel/img-3_middle.png';
-import img_4 from '../../assets/carousel/img-4.png';
-import img_4_middle from '../../assets/carousel/img-4_middle.png';
-import img_5 from '../../assets/carousel/img-5.png';
-import img_5_middle from '../../assets/carousel/img-5_middle.png';
-import img_6 from '../../assets/carousel/img-6.png';
-import img_6_middle from '../../assets/carousel/img-6_middle.png';
+import img1 from '../../assets/carousel/img-1.png';
+import img1Middle from '../../assets/carousel/img-1_middle.png';
+import img2 from '../../assets/carousel/img-2.png';
+import img2Middle from '../../assets/carousel/img-2_middle.png';
+import img3 from '../../assets/carousel/img-3.png';
+import img3Middle from '../../assets/carousel/img-3_middle.png';
+import img4 from '../../assets/carousel/img-4.png';
+import img4Middle from '../../assets/carousel/img-4_middle.png';
+import img5 from '../../assets/carousel/img-5.png';
+import img5Middle from '../../assets/carousel/img-5_middle.png';
+import img6 from '../../assets/carousel/img-6.png';
+import img6Middle from '../../assets/carousel/img-6_middle.png';
 
-export function carousel() {
+export default function carousel() {
   const element = document.createElement('div');
   element.className = 'carousel slide features__carousel';
   element.id = 'features__carousel';
@@ -23,8 +23,8 @@ export function carousel() {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src=${img_1}
-                srcset="${img_1} 375w, ${img_1_middle} 894w"
+                src=${img1}
+                srcset="${img1} 375w, ${img1Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                               894px"
                 class="d-block w-100"
@@ -34,8 +34,8 @@ export function carousel() {
 
             <div class="carousel-item">
               <img
-                src=${img_2}
-               srcset="${img_2} 375w, ${img_2_middle} 894w"
+                src=${img2}
+               srcset="${img2} 375w, ${img2Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                               894px"
                 class="d-block w-100"
@@ -45,8 +45,8 @@ export function carousel() {
 
             <div class="carousel-item">
               <img
-                src=${img_3}
-                srcset="${img_3} 375w, ${img_3_middle} 894w"
+                src=${img3}
+                srcset="${img3} 375w, ${img3Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                            894px"
                 class="d-block w-100"
@@ -56,8 +56,8 @@ export function carousel() {
 
             <div class="carousel-item">
               <img
-                src=${img_4}
-                srcset="${img_4} 375w, ${img_4_middle} 894w"
+                src=${img4}
+                srcset="${img4} 375w, ${img4Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                             894px"
                 class="d-block w-100"
@@ -67,8 +67,8 @@ export function carousel() {
 
             <div class="carousel-item">
               <img
-                src=${img_5}
-                srcset="${img_5} 375w, ${img_5_middle} 894w"
+                src=${img5}
+                srcset="${img5} 375w, ${img5Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                             894px"
                 class="d-block w-100"
@@ -78,8 +78,8 @@ export function carousel() {
 
             <div class="carousel-item">
               <img
-                src=${img_6}
-                srcset="${img_6} 375w, ${img_6_middle} 894w"
+                src=${img6}
+                srcset="${img6} 375w, ${img6Middle} 894w"
                 sizes="(max-width: 893px) 375px,
                             894px"
                 class="d-block w-100"

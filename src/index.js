@@ -1,15 +1,14 @@
-import 'bootstrap/js/dist/carousel.js';
+import 'bootstrap/js/dist/carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css';
 import './style.scss';
-
-import { top } from './modules/top/top.js';
-import { surfaces } from './modules/surfaces/surfaces.js';
-import { features } from './modules/features/features.js';
-import { wireless } from './modules/wireless/wireless.js';
-import { devices } from './modules/devices/devices.js';
-import { advantages } from './modules/advantages/advantages.js';
-import { footer } from './modules/footer/footer.js';
+import top from './modules/top/top';
+import surfaces from './modules/surfaces/surfaces';
+import features from './modules/features/features';
+import wireless from './modules/wireless/wireless';
+import devices from './modules/devices/devices';
+import advantages from './modules/advantages/advantages';
+import footer from './modules/footer/footer';
 
 function getContainer() {
   const element = document.createElement('div');
@@ -31,7 +30,7 @@ document.querySelector('input#toggle').addEventListener('change', (event) => {
 });
 
 document.querySelectorAll('.top__navigator_slide a').forEach((elem) => {
-  elem.addEventListener('click', (event) => {
+  elem.addEventListener('click', () => {
     document.querySelector('input#toggle').checked = false;
     document.body.style.overflow = 'unset';
   });
