@@ -1,11 +1,16 @@
 import './devices.scss';
 
-export default function devices() {
-  const element = document.createElement('section');
-  element.className = 'devices';
-  element.id = 'devices';
+export default class Devices extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'devices';
+    this.id = 'devices';
+  }
 
-  const devicesContent = `
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <div class="inner devices__inner">
         <h2>одновременно с нескольких <br> устройств</h2>
         <ul class="devices_info">
@@ -24,9 +29,11 @@ export default function devices() {
           <li>3. Да, всё так просто!</li>
         </ul>
       </div>
-    
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', devicesContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

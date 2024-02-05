@@ -3,12 +3,17 @@ import './wireless.scss';
 import imgFront from './assets/img-mouse_front.png';
 import imgSide from './assets/img-mouse_side.png';
 
-export default function wireless() {
-  const element = document.createElement('section');
-  element.className = 'wireless';
-  element.id = 'wireless';
+export default class Wireless extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'wireless';
+    this.id = 'wireless';
+  }
 
-  const wirelessContent = `
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <div class="inner wireless__inner">
 
         <h2>без проводов</h2>
@@ -47,8 +52,11 @@ export default function wireless() {
 
         </ul>
       </div>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', wirelessContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

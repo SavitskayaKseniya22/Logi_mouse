@@ -1,13 +1,21 @@
 import './surfaces.scss';
+import CarouselSurfaces from './components/carousel/carousel';
 
-import carousel from './components/carousel/carousel';
+customElements.define('carousel-surfaces-custom', CarouselSurfaces, {
+  extends: 'div',
+});
 
-export default function surfaces() {
-  const element = document.createElement('section');
-  element.className = 'surfaces inner';
-  element.id = 'surfaces';
+export default class Surfaces extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'surfaces inner';
+    this.id = 'surfaces';
+  }
 
-  const surfacesContent = `
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <h2>за любым столом</h2>
       <p class="surfaces__info surfaces__info_top">
         Исследуйте ландшафты своего дома, не отвлекаясь от работы. MX Master 3
@@ -24,13 +32,16 @@ export default function surfaces() {
           <p>точек на дюйм чувствительность датчика</p>
         </li>
       </ul>
-        ${carousel().outerHTML}
+        <div is="carousel-surfaces-custom"></div>
       <p class="surfaces__info">
         Благодаря технологии Logitech Darkfierd, MX Master 3 работает на любой
         поверхности, даже на стекле.
       </p>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', surfacesContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

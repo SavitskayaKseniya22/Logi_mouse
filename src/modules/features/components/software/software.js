@@ -8,12 +8,17 @@ import imgWord from '../../assets/apps/img_word.png';
 import imgPr from '../../assets/apps/img_pr.png';
 import imgVid from '../../assets/apps/img_vid.png';
 
-export default function software() {
-  const element = document.createElement('div');
-  element.className = 'software';
+export default class Software extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'software';
+  }
 
-  const softwareContent = `
-          <ul class="software__list">
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
+      <ul class="software__list">
             <li>
               <img
                 src=${imgPs}
@@ -68,8 +73,11 @@ export default function software() {
             предварительно оптимизировано под популярные приложения на Windows и
             Mac.
           </p>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', softwareContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

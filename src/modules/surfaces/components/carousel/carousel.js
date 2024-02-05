@@ -29,15 +29,19 @@ import imgWoodBig from '../../assets/img-wood_big.png';
 import imgLeft from '../../assets/icon-arrow_left.png';
 import imgRight from '../../assets/icon-arrow_right.png';
 
-export default function carousel() {
-  const element = document.createElement('div');
-  element.className = 'carousel slide surfaces__carousel';
-  element.id = 'surfaces__carousel';
-  element['data-bs-ride'] = 'carousel';
+export default class CarouselSurfaces extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'carousel slide surfaces__carousel';
+    this.id = 'surfaces__carousel';
+    this['data-bs-ride'] = 'carousel';
+  }
 
-  const carouselContent = `
-      
-  <div class="carousel-inner">
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
+      <div class="carousel-inner">
     <div class="carousel-item active">
       <img
         src="${imgCloth}"
@@ -194,9 +198,11 @@ export default function carousel() {
     </button>
 
   </div>
+    `
+    );
+  }
 
-    `;
-
-  element.insertAdjacentHTML('afterbegin', carouselContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

@@ -5,11 +5,17 @@ import logoBlack from './assets/img__logo_black.png';
 import imgBurger from './assets/img__burger_big.png';
 import imgCross from './assets/img__cross_big.png';
 
-export default function top() {
-  const element = document.createElement('div');
+export default class Header extends HTMLDivElement {
+  // eslint-disable-next-line no-useless-constructor
+  constructor() {
+    super();
+  }
 
-  const topContent = ` 
-<header class="top__header">
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
+      <header class="top__header">
 
   <div class="inner top-header__inner">
     <a href="#">
@@ -76,8 +82,23 @@ export default function top() {
     <a href="#wireless" class="top__arrow_down"></a>
   </div>
 </div>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', topContent);
-  return element;
+  connectedCallback() {
+    this.render();
+
+    this.querySelector('input#toggle').addEventListener('change', (event) => {
+      const { checked } = event.target;
+      document.body.style.overflow = checked ? 'hidden' : 'unset';
+    });
+
+    this.querySelectorAll('.top__navigator_slide a').forEach((elem) => {
+      elem.addEventListener('click', () => {
+        document.querySelector('input#toggle').checked = false;
+        document.body.style.overflow = 'unset';
+      });
+    });
+  }
 }

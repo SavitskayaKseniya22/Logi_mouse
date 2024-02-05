@@ -1,11 +1,16 @@
 import './advantages.scss';
 
-export default function advantages() {
-  const element = document.createElement('section');
-  element.className = 'advantages inner';
-  element.id = 'advantages';
+export default class Advantages extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'advantages inner';
+    this.id = 'advantages';
+  }
 
-  const advantagesContent = `
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <div class="advantages__elem" id="advantages__elem_comfort">
         <div class="advantages__text advantages__text_first">
           <h2>комфортно. эргономично. интуитивно.</h2>
@@ -29,8 +34,11 @@ export default function advantages() {
         </div>
         <div class="contain__image contain__image_second"></div>
       </div>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', advantagesContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

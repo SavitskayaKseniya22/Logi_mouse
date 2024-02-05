@@ -1,11 +1,16 @@
 import './footer.scss';
 
-export default function footer() {
-  const element = document.createElement('footer');
-  element.className = 'footer';
-  element.id = 'footer';
+export default class Footer extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'footer';
+    this.id = 'footer';
+  }
 
-  const footerContent = `
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <div class="inner">
         <p>
           Copyright © 2021 Logitech
@@ -13,8 +18,11 @@ export default function footer() {
           Все права защищены
         </p>
       </div>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', footerContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

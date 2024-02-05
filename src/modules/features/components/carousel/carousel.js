@@ -13,14 +13,19 @@ import img5Middle from '../../assets/carousel/img-5_middle.png';
 import img6 from '../../assets/carousel/img-6.png';
 import img6Middle from '../../assets/carousel/img-6_middle.png';
 
-export default function carousel() {
-  const element = document.createElement('div');
-  element.className = 'carousel slide features__carousel';
-  element.id = 'features__carousel';
-  element['data-bs-ride'] = 'carousel';
+export default class CarouselSoftware extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'carousel slide features__carousel';
+    this.id = 'features__carousel';
+    this['data-bs-ride'] = 'carousel';
+  }
 
-  const carouselContent = `
-          <div class="carousel-inner">
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
+      <div class="carousel-inner">
             <div class="carousel-item active">
               <img
                 src=${img1}
@@ -133,10 +138,11 @@ export default function carousel() {
               class="carousel-indicator"
             ></button>
           </div>
-          
-          
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', carouselContent);
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }

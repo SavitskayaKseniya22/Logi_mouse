@@ -1,15 +1,26 @@
 import './features.scss';
 
-import software from './components/software/software';
-import carousel from './components/carousel/carousel';
+import Software from './components/software/software';
+import CarouselSoftware from './components/carousel/carousel';
+
 import imgMouse from './assets/img-mouse_main.png';
 
-export default function features() {
-  const element = document.createElement('section');
-  element.className = 'features';
-  element.id = 'features';
+customElements.define('software-custom', Software, { extends: 'div' });
+customElements.define('carousel-software-custom', CarouselSoftware, {
+  extends: 'div',
+});
 
-  const featuresContent = `
+export default class Features extends HTMLDivElement {
+  constructor() {
+    super();
+    this.className = 'features';
+    this.id = 'features';
+  }
+
+  render() {
+    this.insertAdjacentHTML(
+      'afterbegin',
+      `
       <div class="inner features__inner">
         <h2>с индивидуальными настройками</h2>
         <p class="features__info">
@@ -23,12 +34,15 @@ export default function features() {
           height="698"
           alt="Mouse features"
         /> 
-      ${carousel().outerHTML}
-      ${software().outerHTML}
+      
+      <div is="carousel-software-custom"></div>
+      <div is="software-custom"></div>
       </div>
-    `;
+    `
+    );
+  }
 
-  element.insertAdjacentHTML('afterbegin', featuresContent);
-
-  return element;
+  connectedCallback() {
+    this.render();
+  }
 }
