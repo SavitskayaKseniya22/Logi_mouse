@@ -32,5 +32,6 @@ npm start
 
 ### Screenshots: 
 
+![изображение](https://raw.githubusercontent.com/SavitskayaKseniya22/projects-photos/main/photos/logi-mouse/screenshots/logi-mouse-1280px.png)
 
 
